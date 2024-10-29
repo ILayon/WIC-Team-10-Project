@@ -1,0 +1,49 @@
+<body>
+    <!-- Back button to return to the main page -->
+    <button onclick="window.location.href='index.html';">← Back to Home</button>
+    <!-- Main content of the Quiz page -->
+    <main>
+        <h1>Quiz Page</h1>
+        <section>
+            <h2>Test Your Knowledge!</h2>
+            <p>Answer the following questions:</p>
+            <form>
+                <label for="question1">1. What is the capital of France?</label><br>
+                <input type="radio" id="paris" name="question1" value="Paris">
+                <label for="paris">Paris</label><br>
+                <input type="radio" id="london" name="question1" value="London">
+                <label for="london">London</label><br><br>
+                <label for="question2">2. What is 2 + 2?</label><br>
+                <input type="radio" id="four" name="question2" value="4">
+                <label for="four">4</label><br>
+                <input type="radio" id="five" name="question2" value="5">
+                <label for="five">5</label><br><br>
+                <input type="submit" value="Submit Quiz">
+            </form>
+        </section>
+    </main>
+</body>
+
+<script>
+    function checkAnswers() {
+        const answers = {
+            question1: 'Paris',
+            question2: '4'
+        };
+
+        let score = 0;
+        let totalQuestions = Object.keys(answers).length;
+
+        // Check answers
+        for (let question in answers) {
+            const selected = document.querySelector(`input[name="${question}"]:checked`);
+            if (selected && selected.value === answers[question]) {
+                score++;
+            }
+        }
+
+        // Display results
+        const resultDiv = document.getElementById('result');
+        resultDiv.innerHTML = `You scored ${score} out of ${totalQuestions}.`;
+    }
+</script>
