@@ -7,7 +7,7 @@
         <section>
             <h2>Test Your Knowledge!</h2>
             <p>Answer the following questions:</p>
-            <form>
+            <form onsubmit="checkAnswers(event)">
                 <label for="question1">1. What is the capital of France?</label><br>
                 <input type="radio" id="paris" name="question1" value="Paris">
                 <label for="paris">Paris</label><br>
@@ -20,6 +20,7 @@
                 <label for="five">5</label><br><br>
                 <input type="submit" value="Submit Quiz">
             </form>
+            <div id="result"></div>
         </section>
     </main>
 </body>
