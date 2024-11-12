@@ -1,35 +1,49 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
-
-    <meta charset="utf-8"
-    
-    <meta name="viewport" content="width-device-width, initial-scale=1.0">
-
-    <title>Buzzfeed Quiz</title>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keroppi Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f8ff;
+            color: #333;
+        }
+        h1 {
+            color: #00a86b;
+        }
+        #resultContainer {
+            display: none;
+            margin-top: 20px;
+            color: #007f5f;
+            font-size: 1.5em;
+        }
+        #compatibilityScore {
+            font-weight: bold;
+        }
+    </style>
 </head>
-
 <body>
-
-    <h1>Welcome to our Website!</h1>
-
-    <p>Here, you can learn what Sanrio character suits you!</p>
-    
-    <nav></nav>
-
-</body>
-
-<footer>
-    
-    <p>Curated by: Alicia Pham, Daniella, Isabelle Layon, Jadhira, Krystal Chai, Mary-Ann Huang, and Sabrina &star;</p>
-
-</footer>
-
-</html>
-
+    <button onclick="window.location.href='index.html';">← Back to Home</button>
+    <main>
+        <h1>Keroppi Quiz</h1>
+        <p><a href="https://open.spotify.com/playlist/4zYkOJB18Hb8RLIDAaSPDi?si=3d6e1ea069324db5">
+            <img src="https://i.pinimg.com/originals/bd/6d/f5/bd6df57689b2fca01ea348be42d9deec.png" alt="Image of Keroppi" style="width: 30vw;"></a>
+        </p>
+        <section>
+            <h2>Test Your Compatibility!</h2>
+            <p>Answer the following questions:</p>
+            <form id="quizForm">
+                <!-- Questions 1 through 10 as in your previous code, ensure they're added here -->
+                <label for="question1">1. Are you introverted or extroverted?</label><br>
+                <input type="radio" id="extrovert" name="question1" value="Extroverted">
+                <label for="extrovert">Extroverted</label><br>
+                <input type="radio" id="introvert" name="question1" value="Introverted">
+                <label for="introvert">Introverted</label><br>
+                <input type="radio" id="both" name="question1" value="Both">
+                <label for="both">Both</label><br><br>
 
                 <label for="question2">2. What is your favorite cuisine?</label><br>
                 <input type="radio" id="american" name="question2" value="American">
@@ -110,3 +124,53 @@
                 <label for="adventurous">Adventurous</label><br>
                 <input type="radio" id="thoughtful" name="question10" value="Thoughtful">
                 <label for="thoughtful">Thoughtful</label><br><br>
+                
+                <!-- Repeat similar structure for question2 through question10 -->
+                
+                <button type="button" onclick="calculateScore()">Submit</button>
+            </form>
+
+            <div id="resultContainer">
+                <h2>Your Compatibility with Keroppi:</h2>
+                <p id="compatibilityScore">0%</p>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        function calculateScore() {
+            const answers = {
+                question1: "Extroverted",
+                question2: "Japanese",
+                question3: "Swimming",
+                question4: "Outdoors",
+                question5: "Green",
+                question6: "Early Bird",
+                question7: "Love Them",
+                question8: "Lake",
+                question9: "Spring",
+                question10: "Energetic"
+            };
+
+            let score = 0;
+            const totalQuestions = Object.keys(answers).length;
+
+            for (let i = 1; i <= totalQuestions; i++) {
+                const userAnswer = document.querySelector(`input[name="question${i}"]:checked`);
+                
+                if (userAnswer && userAnswer.value === answers[`question${i}`]) {
+                    score++;
+                }
+            }
+
+            const compatibilityPercentage = Math.round((score / totalQuestions) * 100);
+            
+            const resultContainer = document.getElementById("resultContainer");
+            const compatibilityScore = document.getElementById("compatibilityScore");
+
+            compatibilityScore.textContent = `${compatibilityPercentage}%`;
+            resultContainer.style.display = "block";
+        }
+    </script>
+</body>
+</html>
