@@ -3,21 +3,23 @@
     <button onclick="window.location.href='index.html';">← Back to Home</button>
     <!-- Main content of the Quiz page -->
     <main>
-        <h1>Quiz Page</h1>
+        <h1>Bond with Badtz-Maru!</h1>
         <section>
-            <h2>Test Your Knowledge!</h2>
-            <p>Answer the following questions:</p>
+            <h2>The secretive Badtz-Maru will only share his favorite things if you bond with him!</h2>
+            <p>Answer these questions to see how much you two click!</p>
             <form onsubmit="checkAnswers(event)">
-                <label for="question1">1. What is the capital of France?</label><br>
-                <input type="radio" id="paris" name="question1" value="Paris">
-                <label for="paris">Paris</label><br>
-                <input type="radio" id="london" name="question1" value="London">
-                <label for="london">London</label><br><br>
-                <label for="question2">2. What is 2 + 2?</label><br>
-                <input type="radio" id="four" name="question2" value="4">
-                <label for="four">4</label><br>
-                <input type="radio" id="five" name="question2" value="5">
-                <label for="five">5</label><br><br>
+                <label for="question1">1. What is your favorite food?</label><br>
+                <input type="radio" id="sushi" name="question1" value="sushi">
+                <label for="sushi">Sushi</label><br>
+                <input type="radio" id="ramen" name="question1" value="ramen">
+                <label for="ramen">Ramen</label><br><br>
+                <label for="question2">2. Do you like heroes, villains, or anti-heroes?</label><br>
+                <input type="radio" id="heroes" name="question2" value="heroes">
+                <label for="heroes">Heroes</label><br>
+                <input type="radio" id="villains" name="question2" value="villains">
+                <label for="villains">Villains</label><br><br>
+                <input type="radio" id="anti-heroes" name="question2" value="anti-heroes">
+                <label for="anti-heroes">Anti-Heroes</label><br><br>
                 <input type="submit" value="Submit Quiz">
             </form>
             <div id="result"></div>
@@ -29,8 +31,8 @@
     function checkAnswers() {
         event.preventDefault();
         const answers = {
-            question1: 'Paris',
-            question2: '4'
+            question1: 'Sushi',
+            question2: 'Villains'
         };
 
         let score = 0;
@@ -46,6 +48,12 @@
 
         // Display results
         const resultDiv = document.getElementById('result');
-        resultDiv.innerHTML = `You scored ${score} out of ${totalQuestions}.`;
+        //resultDiv.innerHTML = `You scored ${score} out of ${totalQuestions}.`;
+        if(score > 1){
+            resultDiv.innerHTML = `Badtz-Maru: I rate your bond ${score} out of ${totalQuestions}! I'll tell you my favorite food: it's sushi!`;
+        }
+        else{
+            resultDiv.innerHTML = `Badtz-Maru: I rate your bond ${score} out of ${totalQuestions}! Our bond is too weak! I won't tell you my secrets!`;
+        }
     }
 </script>
