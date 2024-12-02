@@ -7,7 +7,7 @@ var strength = {
 };
 
 var password = document.getElementById('password');
-var meter = document.getElementById('meter');
+var meter = document.getElementById('password-strength-checker');
 var feedback = document.getElementById('password-strength-input');
 
 password.addEventListener('input', function () {
