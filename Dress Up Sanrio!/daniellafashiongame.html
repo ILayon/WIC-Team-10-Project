@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>My First HTML Page!</title>
+        <nav>
+            <a href="index.html">Main Page</a>
+            </a>
+        </nav>
+        <link rel="stylesheet" href="DressStyles.css">
+        <style>
+            .center {
+                text-align: center;
+            }
+            h1 {text-align: center;}
+        </style>
+    </head>
+    <body>
+        <div class="center">
+                <h1>Dress Up Sanrio!</h1>
+            <div class="fixed"></div>
+            <div class="button-container">
+                <button id="top-button" onclick="changeOutfit('top', 'top')">Top</button>
+                <button id="jeans-button" onclick="changeOutfit('pants', 'jeans')">Jeans</button>
+                <button id="skirt-button" onclick="changeOutfit('pants', 'skirt')">Skirt</button>
+                <button id="accessory-button" onclick="changeOutfit('accessory', 'accessory')">Accessory</button>
+            </div>
+        </div>
+        <div class="character-container">
+            <div class="character">
+                <img src="Hello_Kitty_Body.png" alt="Character Body" class="body">
+                <img src="HelloKittyClothes/Top/Top.png" alt="Character Top" class="top" id="top" style="display: none;">
+                <img src="HelloKittyClothes/Jeans/Blue_Pants.png" alt="Character Jeans" class="jeans" id="jeans" style="display: none;">
+                <img src="HelloKittyClothes/Skirt/Pink_Skirt.png" alt="Character Skirt" class="skirt" id="skirt" style="display: none;">
+                <img src="HelloKittyClothes/Accessory/Red_Ribbon.png" alt="Character Accessory" class="accessory" id="accessory" style="display: none;">
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
