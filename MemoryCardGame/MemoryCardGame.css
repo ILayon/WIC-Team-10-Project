@@ -1,0 +1,108 @@
+/* General Styles */
+body {
+    font-family: 'Courier New', 'Monospace';
+    text-align: center;
+    background-image: url('MemoryCardAssets/wallpaper5.png');
+    background-size: 1700px;
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-position: center;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Title and Score */
+  h1 {
+    font-family: monospace;
+    font-size: 2em;
+    margin: 20px 0;
+    color:#3e2a00;
+  }
+  
+  p {
+    font-family: fantasy;
+    font-size: 1.2em;
+    margin: 10px 0;
+    color: #66470a;
+  }
+  
+  /* Grid Container */
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(6, 140px);
+    grid-gap: 16px;
+    justify-content: center;
+    margin: 20px auto;
+  }
+  
+  /* Cards */
+  .card {
+    position: relative;
+    width: 140px;
+    height: 200px;
+    border-radius: 10px;
+    perspective: 1000px;
+    cursor: pointer;
+  }
+  
+  .card-inner {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+  }
+  
+   .card.flipped .card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .card-front,
+  .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+  }
+  
+  .card-front {
+    background: rgb(225, 198, 100);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotateY(180deg);
+
+  }
+  
+  .card-front img {
+    width: auto;
+    height: 140px;
+  }
+  
+  .card-back {
+    background-image: url('MemoryCardAssets/yellowdoggy.png');
+    background-color: #ff9d52;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    /*background-color: #27ae60;*/
+    transform: rotateY(0deg);
+  }
+  
+  /* Restart Button */
+  button {
+    margin: 20px;
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #ffaa00;
+    color: yellow;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: rgb(101, 66, 5);
+  }

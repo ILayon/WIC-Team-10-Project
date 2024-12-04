@@ -1,0 +1,133 @@
+<head>
+    <link rel="stylesheet" href="badtzmaru.css"> 
+</head>
+<body>
+    <!-- Back button to return to the main page -->
+    <!--<button onclick="window.location.href='index.html';">← Back to Home</button>-->
+    <a class="back-button" href="index.html">Back to Home</a>
+    <!-- Main content of the Quiz page -->
+    <main>
+        <h1>Bond with Badtz-Maru!</h1>
+        <section class="quiz-container">
+            <div class="quiz">
+            <h2>The secretive Badtz-Maru will only share his favorite things if you bond with him!</h2>
+            <p>Answer these questions to see how much you two click!</p>
+            <form onsubmit="checkAnswers(event)">
+                <label for="question1">What is your favorite food?</label><br>
+                <input type="radio" id="sushi" name="question1" value="Sushi">
+                <label for="sushi">Sushi</label><br>
+                <input type="radio" id="ramen" name="question1" value="Ramen">
+                <label for="ramen">Ramen</label><br><br>
+                <label for="question2">Do you like heroes, villains, or anti-heroes?</label><br>
+                <input type="radio" id="heroes" name="question2" value="Heroes">
+                <label for="heroes">Heroes</label><br>
+                <input type="radio" id="villains" name="question2" value="Villains">
+                <label for="villains">Villains</label><br>
+                <input type="radio" id="anti-heroes" name="question2" value="Anti-Heroes">
+                <label for="anti-heroes">Anti-Heroes</label><br><br>
+                <label for="question3">How do you like to get places?</label><br>
+                <input type="radio" id="walking" name="question3" value="Walking">
+                <label for="walking">Walking</label><br>
+                <input type="radio" id="jogging" name="question3" value="Jogging">
+                <label for="jogging">Jogging</label><br>
+                <input type="radio" id="skating" name="question3" value="Skating">
+                <label for="skating">Skating</label><br><br>
+                <label for="question4">What do you think about school...?</label><br>
+                <input type="radio" id="easy" name="question4" value="Easy">
+                <label for="easy">It's easy!</label><br>
+                <input type="radio" id="ok" name="question4" value="Ok">
+                <label for="ok">It's ok.</label><br>
+                <input type="radio" id="hard" name="question4" value="Hard">
+                <label for="hard">It's hard...</label><br><br>
+                <label for="question5">Who would you want to be at a job?</label><br>
+                <input type="radio" id="boss" name="question5" value="Boss">
+                <label for="boss">Someone important, like a boss!</label><br>
+                <input type="radio" id="helper" name="question5" value="Helper">
+                <label for="helper">Someone who can help out on the side!</label><br>
+                <input type="radio" id="simple" name="question5" value="Simple">
+                <label for="simple">I don't know, give me some work that's simple!</label><br><br>
+                <input type="submit" value="Rate our bond!">
+            </form>
+            </div>
+            <div id="result"></div>
+            <!-- Image to the right of the quiz -->
+            <div class="image-container">
+                <img src="badtz-maru4.png" alt="Badtz-Maru" />
+            </div>
+        </section>
+
+        <dialog id="resultDialog">
+            <button id="closeDialog">Close</button>
+            <p id="resultMessage"></p>
+            <div id="resultImage"></div>
+        </dialog>
+    </main>
+</body>
+
+<script>
+    function checkAnswers(event) {
+        event.preventDefault();
+        const answers = {
+            question1: 'Sushi',
+            question2: 'Villains',
+            question3: 'Skating',
+            question4: 'Hard',
+            question5: 'Boss'
+        };
+
+        let score = 0;
+        let totalQuestions = Object.keys(answers).length;
+
+        // Check answers
+        for (let question in answers) {
+            const selected = document.querySelector(`input[name="${question}"]:checked`);
+            if (selected && selected.value === answers[question]) {
+                score++;
+            }
+        }
+
+        let imageUrl = '';
+        let iframeHtml = '';
+
+        // Display results
+        let resultMessage = `Badtz-Maru: I rate our bond ${score} out of ${totalQuestions}! `;
+        if(score >= 3 && score < 5){
+            resultMessage += `Not bad...I'll tell you my favorite food: it's sushi!`;
+            imageUrl = 'badtz-maru2.jpg';
+        }
+        else if(score == 5){
+            resultMessage += `Wow! Our bond is perfect! I bet you would really like my music playlist!`;
+            imageUrl = 'badtz-maru3.png';
+            iframeHtml = '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/1eC0heDwFT5zikO8uPn54A?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>'
+        }
+        else{
+            resultMessage += `Our bond is too weak! I won't tell you anything!`;
+            imageUrl = 'badtz-maru1.jpg';
+        }
+
+         // Show the result in the dialog
+        const dialog = document.getElementById("resultDialog");
+        const resultText = document.getElementById("resultMessage");
+        const resultImageDiv = document.getElementById("resultImage");
+        resultText.textContent = resultMessage;
+
+        if (imageUrl) {
+        const imageElement = document.createElement("img");
+        imageElement.src = imageUrl; // Set the image source
+        imageElement.alt = "Result Image"; // Set alt text for accessibility
+        imageElement.style.width = '50%'; // You can adjust the width/height as needed
+        resultImageDiv.innerHTML = ''; // Clear any previous images
+        resultImageDiv.appendChild(imageElement);
+        }
+
+        if (iframeHtml) {
+        resultImageDiv.innerHTML += iframeHtml; // Append the iframe HTML
+        }
+        dialog.showModal();
+        
+        // Close the dialog when the button is clicked
+        document.getElementById("closeDialog").addEventListener("click", () => {
+            dialog.close();
+        });
+    }
+</script>

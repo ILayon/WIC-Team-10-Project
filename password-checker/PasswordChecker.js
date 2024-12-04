@@ -11,6 +11,18 @@ var meter = document.getElementById('password-strength-checker');
 var feedback = document.getElementById('password-strength-input');
 var strengthImage = document.getElementById('strength-image');
 
+var passwordInput = document.getElementById('password');
+var togglePasswordButton = document.getElementById('toggle-password');
+
+togglePasswordButton.addEventListener('click', function() {
+    var currentType = passwordInput.type;
+    if (currentType === 'password') {
+        passwordInput.type = 'text';
+    } else {
+        passwordInput.type = 'password';
+    }
+});
+
 password.addEventListener('input', function () {
     var val = password.value;
     var result = zxcvbn(val);
