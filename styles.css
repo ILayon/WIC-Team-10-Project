@@ -1,7 +1,13 @@
 body {
-    background-color: lightblue;
+  background-image: url(sanrio.png);
+  background-position: center top;
+  background-size: 80%;
+  background-repeat: no-repeat;
+  background-color: rgb(219,241,254);
   }
-  h1 {
-    color: pink
+
+  nav {
+  background-color: white;
+  padding: 10px 0;
   }
   
