@@ -1,2 +1,10 @@
-# WIC-Team-10-Project
- Buzzfeed Inspired Website
+#Overview
+
+#Features
+
+#Files
+
+#Try out the Website Here:
+
+#Contacts
+
