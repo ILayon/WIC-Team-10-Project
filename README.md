@@ -11,4 +11,5 @@ Welcome to Sanrio & Quizzes! Here you can try out all sorts of games and quizzes
 
 # Try out the Website Here:
 ## https://ilayon.github.io/WIC-Team-10-Project/
+
 # Contacts
