@@ -14,3 +14,12 @@ body {
   justify-content: space-evenly;
   }
   
+  body {
+    background-image: url("Sanrio Games & Quizzes-2.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
