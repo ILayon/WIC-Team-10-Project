@@ -1,10 +1,4 @@
-<<<<<<< Updated upstream
-body {
-    background-color: lightblue;
-  }
-  h1 {
-    color: pink
-=======
+
 @font-face {
   font-family: 'Namaku';
   src: url(namaku/Namaku.ttf);
@@ -18,7 +12,6 @@ body {
   text-align: center;
   position: sticky;
   justify-content: space-evenly;
->>>>>>> Stashed changes
   }
 
   nav a {
