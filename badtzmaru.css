@@ -1,0 +1,85 @@
+/* Style for the back button */
+.back-button {
+    text-decoration: none;
+    position: absolute;
+    top: 2em;
+    left: 2em;
+    padding: 10px;
+    background-color: gray;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.back-button:hover{
+    background-color: rgb(100, 99, 99);
+}
+
+/* Apply a badtz maru themed gradient background */
+body {
+    background: linear-gradient(175deg, rgb(253, 255, 121), rgb(255, 255, 216), rgb(114, 113, 113));
+    font-family: Arial, sans-serif; /* Fallback font */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+h1 {
+    text-align: center;
+    font-size: 36px;
+}
+
+/* Style for the submit button */
+input[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: gray;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: rgb(100, 99, 99);
+}
+
+#resultImage {
+    display: flex;
+    justify-content: center;  /* Centers the image horizontally */
+    align-items: center;      /* Centers the image vertically (if the container height is large enough) */
+    margin-top: 20px;         /* Adds some space above the image */
+}
+
+/* Flexbox container for quiz and image */
+.quiz-container {
+    display: flex;
+    align-items: flex-start; /* Aligns the quiz and image to the top */
+    justify-content: space-between; /* Ensures space between quiz and image */
+    margin-top: 20px;
+}
+
+/* Style for the quiz (left side) */
+.quiz {
+    flex: 1; /* This makes sure the quiz takes up available space */
+    margin-right: 20px; /* Adds space between the quiz and the image */
+}
+
+/* Style for the image (right side) */
+.image-container {
+    flex-shrink: 0; /* Prevents the image from shrinking */
+    max-width: 60%; /* Limits the image width */
+}
+
+.image-container img {
+    width: 100%; /* Makes sure the image fills the container without stretching */
+    height: auto; /* Maintains aspect ratio */
+    border-radius: 8px; /* Optional: Add rounded corners */
+}

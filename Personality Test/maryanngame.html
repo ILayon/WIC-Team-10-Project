@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pochacco Personality Quiz</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="quiz-container">
+
+        <header>
+            <img src="pochacco.png" alt="Pochacco Quiz" class="header-image">
+        </header>
+
+        <h1>What Pochacco Activity Matches Your Personality?</h1>
+
+        <nav class="navbar">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+            </ul>
+        </nav>
+
+        <div id="quiz">
+            <div id="question-container">
+                <p id="question">Question will appear here.</p>
+                <div id="options">
+                    <!-- options will be dynamically generated -->
+                </div>
+            </div>
+            <button id="next-btn" class="theme-button">Next</button>
+        </div>
+
+        <div id="result-container" class="hidden">
+            <h2>Your Pochacco Activity</h2>
+            <p id="result-text">Result will appear here.</p>
+            <button id="restart-btn" class="theme-button">Restart</button>
+        </div>
+
+    </div>
+    <footer>
+        <p>© 2024 Sanrio-Inspired Quiz</p>
+    </footer>
+    <script src="game.js"></script>
+</body>
+</html>

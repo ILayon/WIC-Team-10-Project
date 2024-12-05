@@ -1,0 +1,128 @@
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif; 
+    background: linear-gradient(135deg, #fffaf0, #b3e5fc);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #ffffff;
+    padding: 10px 15px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 0 10px 10px 0; 
+    z-index: 1000; 
+}
+
+.navbar ul {
+    list-style: none; 
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.quiz-container {
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 450px;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+
+header .header-image {
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-size: 1.8em;
+    color: #ffcc00;
+}
+
+button {
+    background-color: #fff3cd;
+    border: 2px solid #ffd966;
+    border-radius: 20px;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    transition: transform 0.2s, background-color 0.3s;
+}
+
+button:hover {
+    background-color: #ffe599;
+    transform: scale(1.05);
+}
+
+.theme-button {
+    border-radius: 50px;
+    background: linear-gradient(45deg, #ffccff, #ffeeaa);
+}
+
+.hidden {
+    display: none;
+}
+
+#options button {
+    display: block;
+    margin: 10px auto;
+    width: 80%;
+}
+
+.option-button {
+    background-color: #fff3cd;
+    border: 2px solid #ffd966;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px auto;
+    font-size: 16px;
+    color: #333;
+    cursor: pointer;
+    width: 80%;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.option-button:hover {
+    background-color: #ffe599;
+    transform: scale(1.05);
+}
+
+.option-button.selected {
+    background-color: #ffcc00;
+    color: white;
+    border-color: #ffaa00;
+    transform: scale(1.1); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+footer {
+    font-size: 0.8em;
+    color: #666; 
+    text-align: center; 
+    position: fixed; 
+    bottom: 0; 
+    left: 0;
+    width: 100%; 
+    background-color: #fff; 
+    padding: 5px 10px; 
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); 
+}
+
+footer p {
+    margin: 0;
+}
