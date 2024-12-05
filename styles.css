@@ -1,19 +1,30 @@
-body {
-  background-image: url(sanrio.png);
-  background-position: center top;
-  background-size: 80%;
-  background-repeat: no-repeat;
-  background-color: rgb(219,241,254);
-  }
+
+@font-face {
+  font-family: 'Namaku';
+  src: url(namaku/Namaku.ttf);
+}
 
   nav {
-  background-color: white;
+  background-color: rgb(219,241,254);
+  border-radius: 200px;
+  font-family: 'Namaku';
   padding: 10px 0;
   text-align: center;
   position: sticky;
   justify-content: space-evenly;
   }
-  
+
+  nav a {
+    color: #d68440; 
+    font-size: 14px;
+    margin: 10px;
+    text-decoration: none; 
+}
+
+nav a:hover {
+    color: hsl(24, 59%, 38%); 
+}
+
   body {
     background-image: url("Sanrio Games & Quizzes-2.png");
     background-size: cover;
@@ -23,3 +34,4 @@ body {
     align-items: center;
     justify-content: center;
 }
+
