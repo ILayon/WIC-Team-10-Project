@@ -19,4 +19,5 @@ There are four folders containing the data for all the games, which are Dress Up
 Daniella Benigno, Made: Dress Up Sanrio, dabenigno@ucsd.edu, https://github.com/danieella
 Sabrina Abdurakhmonova, Made: Memory Card Game, sabdurakhmonova@ucsd.edu, https://github.com/sabrinaA-05
 Isabelle Layon, Made: Badtz-Maru's Bonding Quiz, ilayon@ucsd.edu, https://github.com/ILayon
+Alicia Pham, Made: Cinnamoroll's Password Checker, ahp002@ucsd.edu, https://github.com/ahp002
 
