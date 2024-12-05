@@ -24,4 +24,5 @@ There are four folders containing the data for all the games, which are Dress Up
 - Isabelle Layon, Made: Badtz-Maru's Bonding Quiz, ilayon@ucsd.edu, https://github.com/ILayon
 - Alicia Pham, Made: Cinnamoroll's Password Checker, ahp002@ucsd.edu, https://github.com/ahp002
 - Mary-Ann Huang, Made: Pochacco's Personality Test, mah039@ucsd.edu, https://github.com/maryannhuang
+- Krystal Chai, Made: Keroppi's Compatibility Quiz, krchai@ucsd.edu, https://github.com/krystalchai
 
