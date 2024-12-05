@@ -10,6 +10,7 @@ Welcome to Sanrio & Quizzes! Here you can try out all sorts of games and quizzes
 - **Badtz-Maru's Bonding Quiz**: Fill out a compatibility quiz to see how much you and Badtz-Maru have in common! The more you two click, the more he'll want to tell you!
 - **Pompompurin's Memory Game!:** Help Pompompurin find his friends by playing this memory card game! Flip the cards to reveal adorable characters, and match pairs to win.
 - **Pochacco's Personality Test:** Fill out a test that matches your personality with one of Pochacco's favorite activites!
+- **Keroppi's Compatibility Quiz:** See how much you have in common with Keroppi. For a surprise, tap on his character!
 
 # Files
 There are four folders containing the data for all the games, which are Dress Up Sanrio!, MemoryCardGame, Personality Test, password-checker including the Badtz-Maru quiz on the main branch. We have the .gitattributes, README.md, style.css and index.html for the main page. 
